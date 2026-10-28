@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Oryza Catering – Menu &amp; Daftar Catering</title>
+<link rel="icon" href="logo.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="container brand">
+    <img class="logo" src="logo.png" alt="Logo Oryza Catering">
+    <div class="brand-text">
+      <h1>Oryza Catering</h1>
+      <p>Menu makanan lezat &amp; paket Catering untuk setiap acara</p>
+    </div>
+  </div>
+</header>
+
+<nav class="tabs">
+  <button class="tab active" data-tab="menu">Menu Makanan</button>
+  <button class="tab" data-tab="Catering">Daftar Katering</button>
+</nav>
+
+<main class="container">
+  <!-- MENU -->
+  <section id="menu" class="page active">
+    <div class="toolbar">
+      <input id="search" type="search" placeholder="Cari menu… (mis. rendang)">
+    </div>
+    <div class="chips" id="chips" style="margin-bottom:20px"></div>
+    <div class="grid" id="menuGrid"></div>
+    <div class="empty" id="empty" style="display:none">Menu tidak ditemukan 😢</div>
+
+    <div class="po-wrap"><button class="btn po-btn" id="poBtn">Ingin memesan?</button></div>
+
+  </section>
+
+  <!-- KATERING -->
+  <section id="katering" class="page">
+    <h2 style="margin-bottom:6px">Paket Catering</h2>
+    <p style="color:var(--muted);margin-bottom:24px">Harga per porsi. Minimal pemesanan sesuai paket.</p>
+    <div class="grid" id="paketGrid" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr))"></div>
+
+  </section>
+</main>
+
+<footer>© 2026 Oryza Katering · Buka setiap hari 07.00 – 21.00 · WA 081285219899</footer>
+
+<div class="modal" id="payModal">
+  <div class="modal-box" id="payModalBox"></div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
